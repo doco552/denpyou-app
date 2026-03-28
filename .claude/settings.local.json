@@ -1,8 +1,25 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3:*)",
-      "Bash(echo:*)"
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(python3 -m json.tool 2)",
+      "Bash(1 __NEW_LINE_523da8fd172e4174__ curl -s -X POST http://localhost:3000/api/products -H \"Content-Type: application/json\" -d '{\"\"\"\"modelNumber\"\"\"\":\"\"\"\"NR-F607HPX-W\"\"\"\",\"\"\"\"category\"\"\"\":\"\"\"\"冷蔵庫\"\"\"\",\"\"\"\"location\"\"\"\":\"\"\"\"展示室\"\"\"\",\"\"\"\"status\"\"\"\":\"\"\"\"maintenance\"\"\"\",\"\"\"\"attributes\"\"\"\":{\"\"\"\"容量\"\"\"\":\"\"\"\"605L\"\"\"\",\"\"\"\"色\"\"\"\":\"\"\"\"クリスタルホワイト\"\"\"\"}}')",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''登録:'''', d[''''category''''], d[''''modelNumber'''']\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f''''{len\\(d\\)}件:'''', [\\(p[''''category''''], p[''''modelNumber'''']\\) for p in d]\\)\")",
+      "Bash(python3 -c \":*)",
+      "Bash(ngrok version:*)",
+      "Bash(brew install:*)",
+      "Bash(chmod +x /tmp/ngrok-bin/ngrok)",
+      "Bash(/tmp/ngrok-bin/ngrok version:*)",
+      "Bash(chmod +x /tmp/cloudflared)",
+      "Bash(/tmp/cloudflared --version)",
+      "Bash(python3 -c \"import sys,json; print\\(json.load\\(sys.stdin\\)[''''version'''']\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f''''API OK: {len\\(d\\)}件取得''''\\)\")",
+      "Bash(xargs kill:*)",
+      "Bash(npm run:*)"
     ]
   }
 }
