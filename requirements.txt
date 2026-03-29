@@ -1,3 +1,4 @@
-openpyxlstreamlit
+streamlit
 google-generativeai
 openpyxl
+python-dotenv
