@@ -19,7 +19,10 @@
       "Bash(python3 -c \"import sys,json; print\\(json.load\\(sys.stdin\\)[''''version'''']\\)\")",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f''''API OK: {len\\(d\\)}件取得''''\\)\")",
       "Bash(xargs kill:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
