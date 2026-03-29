@@ -1,1 +1,3 @@
+openpyxlstreamlit
+google-generativeai
 openpyxl
