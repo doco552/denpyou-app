@@ -87,7 +87,7 @@ if uploaded_file:
         wb.save(excel_buf)
         excel_bytes = excel_buf.getvalue()
 
-        # ファイル名: 20260323_石川道具市場.xlsx
+        # ファイル名: 20260323_サンプル市場.xlsx
         date_str = purchase_date.replace("/", "") if purchase_date else "unknown"
         location_str = location if location else "unknown"
         filename = f"{date_str}_{location_str}.xlsx"
