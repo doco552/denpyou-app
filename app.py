@@ -74,7 +74,7 @@ if uploaded_file:
                 item.get("location") or "",
                 item.get("item_name") or "",
                 item.get("features") or "",
-                "",          # 型番 年式：常に空白
+                item.get("model_number") or "",  # 型番（登録番号）
                 price_val,
                 "",          # 売値：空白（手入力）
                 "",          # 差額：空白（手入力）
