@@ -1,5 +1,6 @@
 import io
 import openpyxl
+from openpyxl.styles import Alignment
 import streamlit as st
 import pandas as pd
 from extractor import preprocess_image, extract_items
@@ -82,6 +83,11 @@ if uploaded_file:
                 "",          # out：空白（手入力）
                 "",          # 差額合計：空白（手入力）
             ])
+
+        center = Alignment(horizontal="center", vertical="center")
+        for row in ws.iter_rows():
+            for cell in row:
+                cell.alignment = center
 
         excel_buf = io.BytesIO()
         wb.save(excel_buf)
