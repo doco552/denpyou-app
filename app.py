@@ -1,12 +1,25 @@
 import io
+import os
 import openpyxl
 from openpyxl.styles import Alignment
 import streamlit as st
 import pandas as pd
+from dotenv import load_dotenv
 from extractor import preprocess_image, extract_items
+
+load_dotenv()
 
 st.set_page_config(page_title="仕入れ伝票 自動読み取りアプリ", layout="centered")
 st.title("🧾 仕入れ伝票 自動読み取りアプリ")
+
+# --- アクセス制限 ---
+app_password = os.getenv("APP_PASSWORD", "")
+entered = st.text_input("パスワードを入力してください", type="password")
+if entered != app_password or not app_password:
+    if entered:
+        st.error("パスワードが正しくありません。")
+    st.stop()
+st.success("認証成功")
 
 # --- 画像アップロード ---
 uploaded_file = st.file_uploader(
